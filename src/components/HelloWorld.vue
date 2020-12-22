@@ -2,7 +2,7 @@
 
 <div>
 
-   <hooper :settings="hooperSettings">
+   <hooper id = "hoopers" :settings="hooperSettings">
       <slide>
         <div class="images">
           <img src="./../assets/logo.png">
@@ -82,7 +82,7 @@ export default {
 h2 {
   color: #fff
 }
-.hooper {
+#hoopers {
   height: 80vh;
 }
 
