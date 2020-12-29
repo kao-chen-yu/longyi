@@ -21,7 +21,9 @@
     "bootstrap-vue": "^2.16.0",
     "core-js": "^3.6.5",
     "hooper": "^0.3.4",
+    "jw-vue-pagination": "^1.0.3",
     "vue": "^2.6.12",
+    "vue-breadcrumbs": "^1.2.0",
     "vue-router": "^3.0.1"
   },
   "devDependencies": {

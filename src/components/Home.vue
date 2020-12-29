@@ -2,30 +2,31 @@
 
 <div>
 
+   
    <hooper id = "hoopers" :settings="hooperSettings">
       <slide>
         <div class="images">
-          <img src="./../assets/logo.png">
+          <img src="https://picsum.photos/600/300/?image=28">
         </div>
       </slide>
       <slide>          
         <div class="images">
-          <img src="./../assets/1.jpg">
+          <img src="https://picsum.photos/600/300/?image=29">
         </div> 
       </slide>
       <slide>          
         <div class="images">
-          <img src="./../assets/2.jpg">
+          <img src="https://picsum.photos/600/300/?image=20">
         </div>       
       </slide>
       <slide>  
         <div class="images">
-          <img src="./../assets/1.jpg">
+          <img src="https://picsum.photos/600/300/?image=21">
         </div> 
       </slide>
       <slide>     
         <div class="images">
-          <img src="./../assets/1.jpg">
+          <img src="https://picsum.photos/600/300/?image=22">
         </div>
       </slide>
         <hooper-navigation slot="hooper-addons">
@@ -37,6 +38,7 @@
 </svg>
         </hooper-navigation>
         
+        <hooper-pagination slot="hooper-addons"></hooper-pagination>
     </hooper>
 
     <FooterSample />
@@ -51,7 +53,7 @@
   import FooterSample from './Footer.vue';
 
 export default {
-  name: 'HelloWorld',
+  name: 'Home',
   components: {
       Hooper,
       Slide,
