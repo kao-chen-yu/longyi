@@ -45,7 +45,7 @@
 }
 
 .footer_longyi .logo {
-    margin-top : 30px;
+    margin-top : 40px;
     float:left;
 
 }

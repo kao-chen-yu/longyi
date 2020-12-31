@@ -7,7 +7,7 @@
         <span class="title">最新消息</span>
         </div>
     </div>
-    <bread></bread>
+    
     <b-tabs content-class="mt-3" style="margin: 20px;">
         <b-tab  title="產品訊息" active>
             <b-card-group deck>
@@ -19,6 +19,7 @@
                 tag="article"
                 style="max-width: 20rem; height:350px;"
                 class="mb-5"
+                img-height="60%"
                 @click="goNew"
             >
             <a href="#" class="new_link">
@@ -39,6 +40,7 @@
                 tag="article"
                 style="max-width: 20rem; height:350px;"
                 class="mb-5"
+                img-height="60%"
                 @click="goNew"
             >
             <a href="#" class="new_link">
@@ -60,6 +62,7 @@
                 img-top
                 tag="article"
                 style="max-width: 20rem; height:350px;"
+                img-height="60%"
                 class="mb-5"
                 @click="goNew"
             >
@@ -84,6 +87,7 @@
                 img-top
                 tag="article"
                 style="max-width: 20rem; height:350px;"
+                img-height="60%"
                 class="mb-5"
                 @click="goNew"
             >
@@ -108,6 +112,7 @@
                 img-top
                 tag="article"
                 style="max-width: 20rem; height:350px;"
+                img-height="60%"
                 class="mb-5"
                 @click="goNew"
             >
@@ -134,7 +139,7 @@
 
 
 import FooterSample from '@/components/Footer.vue'
-import Bread from '@/components/BreadCrumb'
+//import Bread from '@/components/BreadCrumb'
 export default {
   name: 'LongyiNews',
   data(){
@@ -146,7 +151,7 @@ export default {
   },
   components: {
         FooterSample,
-        Bread
+        //Bread
   },
   methods:{
       goNew(){
@@ -157,25 +162,8 @@ export default {
 }
 </script>
 
-<style>
-.banner_title{
-    top : 20%;
-    position: absolute;;
-    font-family: "fantasy'Calibri', \5FAE\8EDF\6B63\9ED1\9AD4, \65B0\7D30\660E\9AD4, Arial, Helvetica, sans-serif";
-    width:100%;
-    text-align: center;
-}
-.banner{
-    height:250px;
-}
+<style scope>
 
-.banner .title {
-    font-size:3em;
-    opacity: 0.8;
-    text-shadow: 0px 0px 6px rgba(0,0,0,0.5);
-    color:white;
-
-}
 .container_news{
     margin : 40px;
     height : 900px;
@@ -215,9 +203,7 @@ export default {
     color:gray;
 }
 
-.card-img, .card-img-top{
-    height: 60%;
-}
+
 
 .card-deck{
     margin:40px;
