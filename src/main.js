@@ -11,10 +11,11 @@ import { faFacebook, faInstagram ,faYoutube} from '@fortawesome/free-brands-svg-
 import { faAngleRight } from '@fortawesome/free-solid-svg-icons';
 import { faGooglePlus } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
-import VueBreadcrumbs from 'vue-breadcrumbs'
+import VueBreadcrumbs from 'vue-breadcrumbs';
 import JwPagination from 'jw-vue-pagination';
-
-
+import "./plugins/vue2GoogleMaps";
+import axios from 'axios';
+Vue.prototype.$axios = axios;
 
 /* 註冊所有組件為全域 */
 Vue.use(BootstrapVue);

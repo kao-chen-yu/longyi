@@ -17,14 +17,19 @@
     "@fortawesome/vue-fontawesome": "^2.0.2",
     "and": "0.0.3",
     "axios": "^0.20.0",
+    "body-parser": "^1.19.0",
     "bootstrap": "^4.5.2",
     "bootstrap-vue": "^2.16.0",
     "core-js": "^3.6.5",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
     "hooper": "^0.3.4",
     "jw-vue-pagination": "^1.0.3",
+    "taipei-sans-tc": "^0.1.1",
     "vue": "^2.6.12",
     "vue-breadcrumbs": "^1.2.0",
-    "vue-router": "^3.0.1"
+    "vue-router": "^3.0.1",
+    "vue2-google-maps": "^0.10.7"
   },
   "devDependencies": {
     "autoprefixer": "^7.1.2",

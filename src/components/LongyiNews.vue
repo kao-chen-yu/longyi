@@ -7,25 +7,24 @@
         <span class="title">最新消息</span>
         </div>
     </div>
-    
     <b-tabs content-class="mt-3" style="margin: 20px;">
         <b-tab  title="產品訊息" active>
             <b-card-group deck>
               <b-card  v-for="(item,index) in 4" :key="index"
-                title="Card Title"
-                img-src="https://picsum.photos/600/300/?image=25"
+                :title="news[index].title"
+                :img-src="news[index].image"
                 img-alt="Image"
                 img-top
                 tag="article"
-                style="max-width: 20rem; height:350px;"
+                style="max-width: 20rem; height:450px;"
                 class="mb-5"
-                img-height="60%"
+                img-height="50%"
                 @click="goNew"
             >
             <a href="#" class="new_link">
                 <b-card-text>
-                    {{item}}
-                Some quick example text to build on the card title and make up the bulk of the card's content.
+                    
+                {{news[index].content_info}}
                 </b-card-text>
 
             </a>    
@@ -146,7 +145,12 @@ export default {
     return {
 		banner: {
             backgroundImage:"url(" + require("./../assets/banner.jpg") + ")"
-        }
+        },
+        news: [{
+                "image":"",
+                "title":"",
+                "content_info" : ""
+            }]
 	}
   },
   components: {
@@ -158,6 +162,19 @@ export default {
           //alert('test');
            this.$router.push({ name : 'LongyiNew'})
       }
+  },
+  created (){
+    this.$axios
+      .get('http://localhost:8081/news')
+      .then(response => {
+        console.log(response.data);
+        this.news = response.data;
+      })
+      .catch(error => {
+        console.log(error)
+        this.errored = true
+      })
+      .finally(() => this.loading = false)
   }
 }
 </script>

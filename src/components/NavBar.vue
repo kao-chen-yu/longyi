@@ -7,12 +7,12 @@
       <img src="./../assets/logo.png" width="134px" height="63px">
      </a>
     <div class = "all-navbar">
-        <b-navbar-brand href="#" @click="goNews" class = "navb" >最新消息 <br>  News </b-navbar-brand>
-        <b-navbar-brand href="#" @click="goAboutLongyi" class = "navb">關於瀧儀 <br>  About us</b-navbar-brand>
-        <b-navbar-brand href="#" @click="goProducts" class = "navb">產品一覽 <br>  Products</b-navbar-brand>
-        <b-navbar-brand href="#" @click="goTech" class = "navb">核心技術<br>  Technology</b-navbar-brand>
-        <b-navbar-brand href="#" @click="goInvest" class = "navb">投資人專區<br>  Invest</b-navbar-brand>
-        <b-navbar-brand href="#" @click="goContact" class = "navb">聯絡我們<br>  Contact us</b-navbar-brand>
+        <b-navbar-brand href="#" @click="goNews" class = "navb" >最新消息  </b-navbar-brand>
+        <b-navbar-brand href="#" @click="goAboutLongyi" class = "navb">關於瀧儀</b-navbar-brand>
+        <b-navbar-brand href="#" @click="goProducts" class = "navb">產品一覽 </b-navbar-brand>
+        <b-navbar-brand href="#" @click="goTech" class = "navb">核心技術</b-navbar-brand>
+        <b-navbar-brand href="#" @click="goInvest" class = "navb">投資人專區</b-navbar-brand>
+        <b-navbar-brand href="#" @click="goContact" class = "navb">聯絡我們</b-navbar-brand>
 
     </div>
   </b-navbar>
@@ -59,7 +59,7 @@
 .all-navbar .navb{
   position: relative;
   left: 0px;
-  font-size :medium;
+  font-size :x-large;
   text-align:center;
 }
 
@@ -67,13 +67,13 @@
     position: relative;
     font-family:'微軟正黑體', Open Sans;
     left: 50px;
-    margin-left:20px;
+    margin-left:600px;
 }
 
 .sticky-top{
     position: relative;
-  left: 0px;
-  font-size :medium;
-  text-align:center;
+    left: 0px;
+    font-size :medium;
+    text-align:center;
 }
 </style>

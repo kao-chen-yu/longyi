@@ -11,6 +11,9 @@
 
 import Navbar from './components/NavBar.vue';
 import Footer from './components/Footer.vue';
+import 'taipei-sans-tc';
+import 'taipei-sans-tc/dist/Light/TaipeiSansTCBeta-Light.css';
+import 'taipei-sans-tc/dist/Bold/TaipeiSansTCBeta-Bold.css';
 
 export default {
   name: 'App',
