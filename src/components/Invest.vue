@@ -8,11 +8,11 @@
         </div>
     </div>
     
-    <div class="abouts" :style ="about">
-        <div class="about_menu">
+    <div class="invest">
+        <div class="invest_menu">
             <b-list-group>
-                <b-list-group-item href="#" @click="change('1')">營運方針</b-list-group-item>
-                <b-list-group-item href="#" @click="change('2')">關係企業</b-list-group-item>
+                <b-list-group-item href="#" @click="change('1')" id="button">營運方針</b-list-group-item>
+                <b-list-group-item href="#" @click="change('2')" id="button">關係企業</b-list-group-item>
                 </b-list-group>
         
 
@@ -80,22 +80,26 @@ export default {
 
 <style scope>
 
-.abouts{
-    
-    height:500px;
-    margin:0px auto;
-    width:1000px;
+.banner_title .title{
+    font-family: "TaipeiSansTCBeta-Regular";
 }
 
+.invest{
+    
+    height:500px;
+}
 
-.abouts h1{
+.invest_menu #button{
+    background-color: unset;
+}
+.invest h1{
 
     text-align: center;
     padding-top: 20px;
     padding-bottom: 20px;
 }
 
-.abouts h3{
+.invest h3{
 
     
     padding-top: 20px;
@@ -108,7 +112,7 @@ export default {
     margin:0 350px 0 400px;
 }
 
-.about_menu{
+.invest_menu{
     width:25%;
     float: left;
     height:inherit;

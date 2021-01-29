@@ -15,6 +15,7 @@ import VueBreadcrumbs from 'vue-breadcrumbs';
 import JwPagination from 'jw-vue-pagination';
 import "./plugins/vue2GoogleMaps";
 import axios from 'axios';
+import "./style/index.css"
 Vue.prototype.$axios = axios;
 
 /* 註冊所有組件為全域 */

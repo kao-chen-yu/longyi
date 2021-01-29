@@ -8,19 +8,19 @@
         </div>
     </div>
     
-    <div class="technologies" :style ="about">
+    <div class="products">
         <div class="prod_menu">
             <b-list-group>
-                <b-list-group-item href="#" @click="change('1')">客製化低溫常壓電漿應用設計</b-list-group-item>
-                <b-list-group-item href="#" @click="change('2')">醫療器材批發/製造</b-list-group-item>
-                <b-list-group-item href="#" @click="change('3')">寵物精準大健康平台</b-list-group-item>
+                <b-list-group-item href="#" @click="change('1')" id="button">客製化低溫常壓電漿應用設計</b-list-group-item>
+                <b-list-group-item href="#" @click="change('2')" id="button">醫療器材批發/製造</b-list-group-item>
+                <b-list-group-item href="#" @click="change('3')" id="button">寵物精準大健康平台</b-list-group-item>
                 </b-list-group>
         
 
         </div>
 
-        <div class ="tech_content" v-if="show === '0'">
-            <div>
+        <div class ="tech_content" v-if="show === '0'" style="margin-left: 50px;">
+            <div >
                 <h3>產品介紹</h3>
                 這是一個測試用的網頁專門拿來看文字顯示是不是正確的
             </div>
@@ -158,21 +158,21 @@ export default {
 
 <style scope>
 
-.technologies{
+
+
+.products{
     
     height:500px;
-    margin:0px auto;
-    width:1000px;
 }
 
-.technologies h1{
+.products h1{
 
     text-align: center;
     padding-top: 20px;
     padding-bottom: 20px;
 }
 
-.technologies h3{
+.products h3{
 
     text-align: center;
     padding-top: 20px;
@@ -190,6 +190,10 @@ export default {
     float: left;
     height:inherit;
     margin-top:90px;
+}
+
+.prod_menu #button{
+    background-color: unset;
 }
 
 .tech_content{

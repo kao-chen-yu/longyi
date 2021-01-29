@@ -11,9 +11,6 @@
 
 import Navbar from './components/NavBar.vue';
 import Footer from './components/Footer.vue';
-import 'taipei-sans-tc';
-import 'taipei-sans-tc/dist/Light/TaipeiSansTCBeta-Light.css';
-import 'taipei-sans-tc/dist/Bold/TaipeiSansTCBeta-Bold.css';
 
 export default {
   name: 'App',
@@ -37,12 +34,12 @@ nav.breadcrumbs ul li:before {
 nav.breadcrumbs ul li:first-child:before {
             display: none;
 }
-body{font-family: arial,"Microsoft JhengHei","微軟正黑體",sans-serif !important;}
+body{font-family: "TaipeiSansTCBeta-Regular" !important;}
 
 .banner_title{
-    top : 20%;
+    top : 25%;
     position: absolute;;
-    font-family: "fantasy'Calibri', \5FAE\8EDF\6B63\9ED1\9AD4, \65B0\7D30\660E\9AD4, Arial, Helvetica, sans-serif";
+    font-family: "TaipeiSansTCBeta-Regular";
     width:100%;
     text-align: center;
 }

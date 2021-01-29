@@ -9,69 +9,32 @@
     </div>
     
     <div class="contacts">
-      <b-card bg-variant="light" id="contact_card">
-        <div class="contact">
-            <span>聯絡我們</span>
-        </div>
-        <b-form @submit="onSubmit">    
-            <b-form-group
-                label="姓名 : "
-                label-for="nested-street"
-                label-cols-sm="2"
-                
-            >
-                <b-form-input id="nested-street" v-model="form.name"></b-form-input>
-            </b-form-group>
 
-            <b-form-group
-                label="E-mail: "
-                label-for="nested-city"
-                label-cols-sm="2"
-                
-            >
-                <b-form-input id="nested-city" v-model="form.email"></b-form-input>
-            </b-form-group>
-
-            <b-form-group
-                label="訊息:"
-                label-for="nested-state"
-                label-cols-sm="2"
-               
-            >
-            <b-form-textarea
-            id="textarea"
-            v-model="form.message"
-            placeholder="Enter something..."
-            rows="3"
-            max-rows="6"
-            ></b-form-textarea>
-
-            
-            </b-form-group>
-        <b-button type="submit" variant="primary" style="margin-top:20px;">送出</b-button>
-        </b-form>
-        <div class="company_info">
-        </div>
-        </b-card>
         <b-card bg-variant="light" class="contact_right">
                     <div class="contact_information">
 
-                    
-                    <GmapMap
-                    :center="{lat:22.828341, lng:120.258601}"
-                    :zoom="18"
-                    style="width: 70%; height: 350px"
-                    >
+                        <div style="float: left;margin-left: 100px;">
+                        <div style="width: 500px; height: 200px;">
+                          <p>瀧儀生醫科股份有限公司</p>
+                          <p class = "information">地址 : 高雄市路竹區北嶺里路科五路92號4樓B室</p>
+                          <p class = "information">電話 : 07-695-5080</p>
+                          <p class = "information">E-mail : OOXXOOX@gmail.com</p>
+                        </div>                      
+                        <GmapMap                                           
+                        :center="{ lat: 22.827961, lng: 120.257980}"
+                        :zoom="18"
+                        style="width: 500px; height: 450px"
+                        >
 
 
-                    <GmapMarker
-                        :key="index"
-                        v-for="(m, index) in markers"
-                        :position="m.position"
-                        :clickable="true"
-                        :draggable="true"
-                        @click="toggleInfoWindow(m,i)"
-                    />
+                        <GmapMarker
+                            :key="index"
+                            v-for="(m, index) in markers"
+                            :position="m.position"
+                            :clickable="true"
+                            :draggable="true"
+                            @click="toggleInfoWindow(m,i)"
+                        />
                           <gmap-info-window 
                           :options="infoOptions" 
                           :position="infoWindowPos" 
@@ -85,8 +48,66 @@
                             </div>
                         </gmap-info-window>
 
-                    </GmapMap>
-                    </div>
+                        </GmapMap>
+                        </div>
+                        </div>
+
+                        <div style = "float: left;width: 40%;margin-left: 60px;height: 600px;margin-top: 200px;">
+                          <b-form @submit="onSubmit">    
+                            
+                            <b-form-group
+                                label="姓名 : "
+                                label-for="nested-street"
+                                label-cols-sm="2"
+                                label-size="lg" 
+                                :invalid-feedback="invalidFeedback"
+                                :state="state"
+                            >
+                            
+                                <b-form-input id="nested-street" v-model="form.name"></b-form-input>
+                            </b-form-group>
+                           <b-form-group
+                                label="連絡電話 : "
+                                label-for="nested-street"
+                                label-cols-sm="2"
+                                label-size="lg" 
+                                :invalid-feedback="invalidFeedback1"
+                                :state="state1"
+                            >
+                                <b-form-input id="nested-street" v-model="form.contractNumber"></b-form-input>
+                            </b-form-group>
+                            <b-form-group
+                                label="E-mail: "
+                                label-for="nested-city"
+                                label-cols-sm="2"
+                                label-size="lg" 
+                                :invalid-feedback="invalidFeedback2"
+                                :state="state2"
+                            >
+                                <b-form-input id="nested-city" v-model="form.email"></b-form-input>
+                            </b-form-group>
+
+                            <b-form-group
+                                label="備註:"
+                                label-for="nested-state"
+                                label-cols-sm="2"
+                                label-size="lg" 
+                            >
+                            <b-form-textarea
+                            id="textarea"
+                            v-model="form.message"
+                            placeholder="Enter something..."
+                            rows="3"
+                            max-rows="6"
+                            ></b-form-textarea>
+
+                            
+                            </b-form-group>
+                            <b-button type="submit" style="margin-top:20px;">確定送出</b-button>
+                            </b-form>
+
+                        </div>
+
         </b-card>
 
 
@@ -111,12 +132,13 @@ export default {
         form: {
           email: '',
           name: '',
-          message: ''
+          message: '',
+          contractNumber : '',
         },
 
         markers: [
         {
-          position: { lat: 22.828341, lng: 120.258601 },
+          position: { lat: 22.827961, lng: 120.257980 },
           infoText: '瀧儀生醫科股份有限公司',
           location: '高雄市路竹區北嶺里路科五路92號4樓B室'
         }
@@ -142,6 +164,35 @@ export default {
         FooterSample,
         //Bread
   },
+  computed: {
+      state() {
+        return this.form.name.length >= 1
+      },
+      invalidFeedback() {
+        if (this.form.name.length > 0) {
+          return ''
+        }
+        return '必填'
+      },
+            state1() {
+        return this.form.contractNumber.length >= 1
+      },
+      invalidFeedback1() {
+        if (this.form.contractNumber.length > 0) {
+          return ''
+        }
+        return '必填'
+      },
+            state2() {
+        return this.form.email.length >= 1
+      },
+      invalidFeedback2() {
+        if (this.form.email.length > 0) {
+          return ''
+        }
+        return '必填'
+      }
+  },
   methods:{
       onSubmit(event) {
         event.preventDefault()
@@ -163,7 +214,7 @@ export default {
             }
         },
         openMap(){
-            window.open('https://reurl.cc/e80QoQ');
+            window.open('https://reurl.cc/a5N65Q');
         }
         
   }
@@ -173,7 +224,7 @@ export default {
 
 <style>
 .contacts{
-    height:400px;
+    height:700px;
 }
 #contact_card{
     width:50%;
@@ -197,9 +248,8 @@ export default {
 }
 
 .contact_information{
-    font-size: larger;
-    
-    text-align:center;
+    font-size: 40px;
+        
 }
 
 .contact_information p{
@@ -214,20 +264,17 @@ export default {
     font-size: large;
 }
 
-#nested-street{
-  width:200px;
-}
 
-#nested-city{
-  width:250px;
-}
-
-#textarea{
-  width:300px;
-}
 
 .company_info{
   padding-top:50px;
+}
+
+
+
+.contact_information .information{
+  font-size: large;
+  color:gray;
 }
 </style>
 

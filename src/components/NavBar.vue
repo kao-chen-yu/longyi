@@ -54,12 +54,12 @@
 	}
 </script>
 
-<style>
+<style scope>
 
 .all-navbar .navb{
   position: relative;
   left: 0px;
-  font-size :x-large;
+  font-size :large;
   text-align:center;
 }
 
@@ -67,7 +67,7 @@
     position: relative;
     font-family:'微軟正黑體', Open Sans;
     left: 50px;
-    margin-left:600px;
+    margin-left:300px;
 }
 
 .sticky-top{

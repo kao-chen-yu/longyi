@@ -79,6 +79,12 @@ export default {
 </script>
 
 <style>
+
+.banner_title .title{
+    font-family: "TaipeiSansTCBeta-Regular";
+}
+
+
 .new_list{
     border-top: solid 2px #EBEBEB;
     border-block: solid 2px #EBEBEB;

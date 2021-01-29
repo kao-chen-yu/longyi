@@ -4,15 +4,15 @@
 
     <div class = "banner" :style ="banner">
         <div class="banner_title">
-        <span class="title">產品介紹</span>
+        <span class="title">關於瀧儀</span>
         </div>
     </div>
     
-    <div class="abouts" :style ="about">
+    <div class="abouts">
         <div class="about_menu">
             <b-list-group>
-                <b-list-group-item href="#" @click="change('1')">公司簡介</b-list-group-item>
-                <b-list-group-item href="#" @click="change('2')">營運團隊</b-list-group-item>
+                <b-list-group-item href="#" @click="change('1')" id="button">公司簡介</b-list-group-item>
+                <b-list-group-item href="#" @click="change('2')" id="button">營運團隊</b-list-group-item>
                 </b-list-group>
         
 
@@ -20,14 +20,14 @@
 
         <div class ="about_content1" v-if="show === '1'">
             <div class="about_content">
-                <h3>龍儀公司簡介</h3>
+                <h3>瀧儀公司簡介</h3>
                 <span>這是個公司簡介，很神奇的，快來看看</span>
             </div>
         </div>
 
         <div class ="about_content1" v-if="show === '2'">
             <div class="about_content">
-                <h3>龍儀公司營運團隊</h3>
+                <h3>瀧儀公司營運團隊</h3>
                 <span>這是個公司營運團隊簡介，很神奇的，快來看看</span>
             </div>
         </div>
@@ -79,14 +79,18 @@ export default {
 
 
 <style scope>
+.banner_title .title{
+    font-family: "TaipeiSansTCBeta-Regular";
+}
 
 .abouts{
     
     height:500px;
-    margin:0px auto;
-    width:1000px;
 }
 
+.about_menu #button{
+    background-color: unset;
+}
 
 .abouts h1{
 

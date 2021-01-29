@@ -6,27 +6,27 @@
    <hooper id = "hoopers" :settings="hooperSettings">
       <slide>
         <div class="images">
-          <img src="https://picsum.photos/600/300/?image=28">
+          <img src="https://picsum.photos/600/300/?image=28" style="height:110vh;width:100%">
         </div>
       </slide>
       <slide>          
         <div class="images">
-          <img src="https://picsum.photos/600/300/?image=29">
+          <img src="https://picsum.photos/600/300/?image=39" style="height:110vh;width:100%">
         </div> 
       </slide>
       <slide>          
         <div class="images">
-          <img src="https://picsum.photos/600/300/?image=20">
+          <img src="https://picsum.photos/600/300/?image=32" style="height:110vh;width:100%">
         </div>       
       </slide>
       <slide>  
         <div class="images">
-          <img src="https://picsum.photos/600/300/?image=21">
+          <img src="https://picsum.photos/600/300/?image=21" style="height:110vh;width:100%">
         </div> 
       </slide>
       <slide>     
         <div class="images">
-          <img src="https://picsum.photos/600/300/?image=22">
+          <img src="https://picsum.photos/600/300/?image=22" style="height:110vh;width:100%">
         </div>
       </slide>
         <hooper-navigation slot="hooper-addons">
@@ -92,7 +92,7 @@ h2 {
   color: #fff
 }
 #hoopers {
-  height: 80vh;
+  height: 95vh;
 }
 
 .footer {

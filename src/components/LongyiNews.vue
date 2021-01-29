@@ -146,11 +146,29 @@ export default {
 		banner: {
             backgroundImage:"url(" + require("./../assets/banner.jpg") + ")"
         },
-        news: [{
-                "image":"",
-                "title":"",
-                "content_info" : ""
-            }]
+        news: [
+                {
+                "image":"/static/img/new_header.98d2ac8.jpg",
+                "title":"經濟部助中小企業佈局後疫情時代商機 生醫展創新 鏈結國內外商機",
+                "content_info" : "經濟部助中小企業佈局後疫情時代商機 生醫展創新 鏈結國內外商機....."
+                },
+                {
+                "image":"/static/img/new_header.98d2ac8.jpg",
+                "title":"經濟部助中小企業佈局後疫情時代商機 生醫展創新 鏈結國內外商機2",
+                "content_info" : "經濟部助中小企業佈局後疫情時代商機 生醫展創新 鏈結國內外商機....."
+                },
+                {
+                "image":"/static/img/new_header.98d2ac8.jpg",
+                "title":"經濟部助中小企業佈局後疫情時代商機 生醫展創新 鏈結國內外商機3",
+                "content_info" : "經濟部助中小企業佈局後疫情時代商機 生醫展創新 鏈結國內外商機....."
+                },
+                {
+                "image":"/static/img/new_header.98d2ac8.jpg",
+                "title":"經濟部助中小企業佈局後疫情時代商機 生醫展創新 鏈結國內外商機4",
+                "content_info" : "經濟部助中小企業佈局後疫情時代商機 生醫展創新 鏈結國內外商機....."
+                }
+                    
+            ]
 	}
   },
   components: {
@@ -181,6 +199,9 @@ export default {
 
 <style scope>
 
+.banner_title .title{
+    font-family: "TaipeiSansTCBeta-Regular";
+}
 .container_news{
     margin : 40px;
     height : 900px;
