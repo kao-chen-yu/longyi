@@ -7,23 +7,30 @@
         <span class="title">最新消息</span>
         </div>
     </div>
+
+    <Bread></Bread>
     <b-tabs content-class="mt-3" style="margin: 20px;">
         <b-tab  title="產品訊息" active>
             <b-card-group deck>
               <b-card  v-for="(item,index) in 4" :key="index"
-                :title="news[index].title"
                 :img-src="news[index].image"
                 img-alt="Image"
                 img-top
                 tag="article"
-                style="max-width: 20rem; height:450px;"
+                style="max-width: 20rem; height:400px;"
                 class="mb-5"
-                img-height="50%"
+                img-height="40%"
                 @click="goNew"
             >
+
+            <div style="padding-bottom:10px;">
+                {{news[index].date}}
+            </div>
+            <div style="font-size:19px;">
+                {{news[index].title}}               
+            </div>
             <a href="#" class="new_link">
-                <b-card-text>
-                    
+                <b-card-text>                    
                 {{news[index].content_info}}
                 </b-card-text>
 
@@ -37,9 +44,9 @@
                 img-alt="Image"
                 img-top
                 tag="article"
-                style="max-width: 20rem; height:350px;"
+                style="max-width: 20rem; height:400px;"
                 class="mb-5"
-                img-height="60%"
+                img-height="40%"
                 @click="goNew"
             >
             <a href="#" class="new_link">
@@ -129,7 +136,7 @@
     </b-tabs>
 
 
-    <FooterSample />
+    
 
 </div>
 </template>
@@ -137,8 +144,8 @@
 <script>
 
 
-import FooterSample from '@/components/Footer.vue'
-//import Bread from '@/components/BreadCrumb'
+
+import Bread from '@/components/BreadCrumb'
 export default {
   name: 'LongyiNews',
   data(){
@@ -148,32 +155,36 @@ export default {
         },
         news: [
                 {
-                "image":"/static/img/new_header.98d2ac8.jpg",
+                "image":"https://lh3.googleusercontent.com/M0trHWJPYxqoMeDQa4W-_6UJiusnnGFQw4AlrhRpXxtETWFXn3HutGxSYaCYPmPreAZNK-llbyyMpcGfH7JMtniP7sP5zQtO2cBdI-cveV_gWQn4sGNIitDnpW5HxGYUX9zsJMLgDQ=w1200",
                 "title":"經濟部助中小企業佈局後疫情時代商機 生醫展創新 鏈結國內外商機",
-                "content_info" : "經濟部助中小企業佈局後疫情時代商機 生醫展創新 鏈結國內外商機....."
+                "content_info" : "經濟部助中小企業佈局後疫情時代商機 生醫展創新 鏈結國內外商機.....",
+                "date" : '2021/02/01'
                 },
                 {
-                "image":"/static/img/new_header.98d2ac8.jpg",
+                "image":"https://lh3.googleusercontent.com/M0trHWJPYxqoMeDQa4W-_6UJiusnnGFQw4AlrhRpXxtETWFXn3HutGxSYaCYPmPreAZNK-llbyyMpcGfH7JMtniP7sP5zQtO2cBdI-cveV_gWQn4sGNIitDnpW5HxGYUX9zsJMLgDQ=w1200",
                 "title":"經濟部助中小企業佈局後疫情時代商機 生醫展創新 鏈結國內外商機2",
-                "content_info" : "經濟部助中小企業佈局後疫情時代商機 生醫展創新 鏈結國內外商機....."
+                "content_info" : "經濟部助中小企業佈局後疫情時代商機 生醫展創新 鏈結國內外商機.....",
+                "date" : '2021/02/02'
                 },
                 {
-                "image":"/static/img/new_header.98d2ac8.jpg",
+                "image":"https://lh3.googleusercontent.com/M0trHWJPYxqoMeDQa4W-_6UJiusnnGFQw4AlrhRpXxtETWFXn3HutGxSYaCYPmPreAZNK-llbyyMpcGfH7JMtniP7sP5zQtO2cBdI-cveV_gWQn4sGNIitDnpW5HxGYUX9zsJMLgDQ=w1200",
                 "title":"經濟部助中小企業佈局後疫情時代商機 生醫展創新 鏈結國內外商機3",
-                "content_info" : "經濟部助中小企業佈局後疫情時代商機 生醫展創新 鏈結國內外商機....."
+                "content_info" : "經濟部助中小企業佈局後疫情時代商機 生醫展創新 鏈結國內外商機.....",
+                "date" : '2021/02/03'
                 },
                 {
-                "image":"/static/img/new_header.98d2ac8.jpg",
+                "image":"https://lh3.googleusercontent.com/M0trHWJPYxqoMeDQa4W-_6UJiusnnGFQw4AlrhRpXxtETWFXn3HutGxSYaCYPmPreAZNK-llbyyMpcGfH7JMtniP7sP5zQtO2cBdI-cveV_gWQn4sGNIitDnpW5HxGYUX9zsJMLgDQ=w1200",
                 "title":"經濟部助中小企業佈局後疫情時代商機 生醫展創新 鏈結國內外商機4",
-                "content_info" : "經濟部助中小企業佈局後疫情時代商機 生醫展創新 鏈結國內外商機....."
+                "content_info" : "經濟部助中小企業佈局後疫情時代商機 生醫展創新 鏈結國內外商機.....",
+                "date" : '2021/02/04'
                 }
                     
             ]
 	}
   },
   components: {
-        FooterSample,
-        //Bread
+        
+        Bread
   },
   methods:{
       goNew(){
@@ -200,7 +211,7 @@ export default {
 <style scope>
 
 .banner_title .title{
-    font-family: "TaipeiSansTCBeta-Regular";
+    font-family: '微軟正黑體, "Microsoft JhengHei", Arial, Helvetica;';
 }
 .container_news{
     margin : 40px;
@@ -249,6 +260,18 @@ export default {
 
 .new_link{
     color:gray;
+}
+
+.nav-tabs .nav-item{
+    font-size: 1.3rem;
+    margin-bottom:0px;
+}
+
+.nav-tabs{
+    border-bottom:2px solid gray;
+}
+.card-body .card-title{
+    font-size: 1rem  !important;
 }
 </style>
 

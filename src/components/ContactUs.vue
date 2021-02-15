@@ -7,18 +7,18 @@
         <span class="title">聯絡我們</span>
         </div>
     </div>
-    
+    <Bread></Bread>
     <div class="contacts">
 
         <b-card bg-variant="light" class="contact_right">
                     <div class="contact_information">
 
                         <div style="float: left;margin-left: 100px;">
-                        <div style="width: 500px; height: 200px;">
-                          <p>瀧儀生醫科股份有限公司</p>
+                        <div style="width: 500px; height: 200px;margin-left: 70%;">
+                          <p style="text-align: center;">瀧儀生醫科股份有限公司</p>
                           <p class = "information">地址 : 高雄市路竹區北嶺里路科五路92號4樓B室</p>
                           <p class = "information">電話 : 07-695-5080</p>
-                          <p class = "information">E-mail : OOXXOOX@gmail.com</p>
+                          <p class = "information">E-mail : lysbio7258@gmail.com</p>
                         </div>                      
                         <GmapMap                                           
                         :center="{ lat: 22.827961, lng: 120.257980}"
@@ -88,7 +88,7 @@
                             </b-form-group>
 
                             <b-form-group
-                                label="備註:"
+                                label="意見:"
                                 label-for="nested-state"
                                 label-cols-sm="2"
                                 label-size="lg" 
@@ -103,7 +103,7 @@
 
                             
                             </b-form-group>
-                            <b-button type="submit" style="margin-top:20px;">確定送出</b-button>
+                            <b-button type="submit" style="margin-top:20px; margin-left:85%;">確定送出</b-button>
                             </b-form>
 
                         </div>
@@ -112,16 +112,13 @@
 
 
     </div>
-    <FooterSample />
 
 </div>
 </template>
 
 <script>
 
-
-import FooterSample from '@/components/Footer.vue'
-//import Bread from '@/components/BreadCrumb'
+import Bread from '@/components/BreadCrumb'
 export default {
   name: 'ContactUs',
   data(){
@@ -161,8 +158,8 @@ export default {
 	}
   },
   components: {
-        FooterSample,
-        //Bread
+       
+        Bread
   },
   computed: {
       state() {
@@ -262,6 +259,7 @@ export default {
     margin-bottom: 10px;
     padding-top :0px;
     font-size: large;
+    
 }
 
 
@@ -275,6 +273,7 @@ export default {
 .contact_information .information{
   font-size: large;
   color:gray;
+  text-align: center;
 }
 </style>
 

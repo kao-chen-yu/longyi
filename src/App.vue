@@ -1,20 +1,18 @@
 <template>
 <div id="app">		
-		<Navbar />	
-    
-    <router-view/>
-    
+	<Navbar />	   
+        <router-view/>
+    <FooterSample />
 </div>
 </template>
 
 <script>
 
 import Navbar from './components/NavBar.vue';
-import Footer from './components/Footer.vue';
-
+import FooterSample from '@/components/Footer.vue'
 export default {
   name: 'App',
-  components: {Navbar,Footer},
+  components: {Navbar,FooterSample},
 }
 </script>
 
@@ -34,17 +32,19 @@ nav.breadcrumbs ul li:before {
 nav.breadcrumbs ul li:first-child:before {
             display: none;
 }
-body{font-family: "TaipeiSansTCBeta-Regular" !important;}
+body{font-family: '微軟正黑體, "Microsoft JhengHei", Arial, Helvetica;' !important;
+     background-color :aliceblue !important;
+}
 
 .banner_title{
-    top : 25%;
+    top : 30%;
     position: absolute;;
-    font-family: "TaipeiSansTCBeta-Regular";
+    font-family: '微軟正黑體, "Microsoft JhengHei", Arial, Helvetica;';
     width:100%;
     text-align: center;
 }
 .banner{
-    height:250px;
+    height:400px;
 }
 
 .banner .title {

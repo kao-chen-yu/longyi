@@ -7,10 +7,11 @@
         <span class="title">產品介紹</span>
         </div>
     </div>
-    
+    <Bread></Bread>
     <div class="products">
         <div class="prod_menu">
             <b-list-group>
+                <b-list-group-item href="#"  id="button_title">產品介紹</b-list-group-item>
                 <b-list-group-item href="#" @click="change('1')" id="button">客製化低溫常壓電漿應用設計</b-list-group-item>
                 <b-list-group-item href="#" @click="change('2')" id="button">醫療器材批發/製造</b-list-group-item>
                 <b-list-group-item href="#" @click="change('3')" id="button">寵物精準大健康平台</b-list-group-item>
@@ -19,11 +20,11 @@
 
         </div>
 
-        <div class ="tech_content" v-if="show === '0'" style="margin-left: 50px;">
-            <div >
-                <h3>產品介紹</h3>
-                這是一個測試用的網頁專門拿來看文字顯示是不是正確的
-            </div>
+        <div class ="prod_content" v-if="show === '0'" style="margin-top: 70px;margin-left: 50px;width: 60%;">            
+            <h1 style="border-bottom: 4px solid rgba(0, 0, 0, 0.125);">產品介紹</h1>
+               
+            
+            
             <a href="#">
             <b-card
                 overlay
@@ -67,54 +68,73 @@
             </b-card>
             </a>
         </div>
-        <div class ="tech_content1" v-if="show === '1'">
-            <b-card
-                overlay
-                img-src="https://picsum.photos/900/250/?image=3"
-                img-alt="Card Image"
-                text-variant="white"
-                title="客製化低溫常壓電漿應用設計"
-                img-height="400px"
-            >
-                <b-card-text>
+        <div class ="prod_content1" v-show="show === '1'" >
+            <h1>客製化低溫常壓電漿應用設計</h1>
+            <b-card-text>
                 Some quick example text to build on the card and make up the bulk of the card's content.
-                </b-card-text>
-            </b-card>
+                Some quick example text to build on the card and make up the bulk of the card's content.
+                Some quick example text to build on the card and make up the bulk of the card's content.
+                Some quick example text to build on the card and make up the bulk of the card's content.
+                Some quick example text to build on the card and make up the bulk of the card's content.
+            </b-card-text>
+            
+            <img src="https://picsum.photos/600/300/?image=22">
+
+            <b-card-text>
+                Some quick example text to build on the card and make up the bulk of the card's content.
+                Some quick example text to build on the card and make up the bulk of the card's content.
+                Some quick example text to build on the card and make up the bulk of the card's content.
+                Some quick example text to build on the card and make up the bulk of the card's content.
+                Some quick example text to build on the card and make up the bulk of the card's content.
+            </b-card-text>
         </div>
 
-        <div class ="tech_content1" v-if="show === '2'">
-            <b-card
-                overlay
-                img-src="https://picsum.photos/900/250/?image=3"
-                img-alt="Card Image"
-                text-variant="white"
-                title="醫療器材批發/製造"
-                img-height="400px"
-            >
-                <b-card-text>
+
+        <div class ="prod_content1" v-show="show === '2'">
+            <h1>醫療器材批發/製造</h1>
+            <b-card-text>
                 Some quick example text to build on the card and make up the bulk of the card's content.
-                </b-card-text>
-            </b-card>
+                Some quick example text to build on the card and make up the bulk of the card's content.
+                Some quick example text to build on the card and make up the bulk of the card's content.
+                Some quick example text to build on the card and make up the bulk of the card's content.
+                Some quick example text to build on the card and make up the bulk of the card's content.
+            </b-card-text>
+            
+            <img src="https://picsum.photos/600/300/?image=22">
+
+            <b-card-text>
+                Some quick example text to build on the card and make up the bulk of the card's content.
+                Some quick example text to build on the card and make up the bulk of the card's content.
+                Some quick example text to build on the card and make up the bulk of the card's content.
+                Some quick example text to build on the card and make up the bulk of the card's content.
+                Some quick example text to build on the card and make up the bulk of the card's content.
+            </b-card-text>
         </div>
 
-                <div class ="tech_content1" v-if="show === '3'">
-            <b-card
-                overlay
-                img-src="https://picsum.photos/900/250/?image=3"
-                img-alt="Card Image"
-                text-variant="white"
-                title="寵物精準大健康平台"
-                img-height="400px"
-            >
-                <b-card-text>
+                <div class ="prod_content1" v-show="show === '3'">
+            <h1>寵物精準大健康平台</h1>
+            <b-card-text>
                 Some quick example text to build on the card and make up the bulk of the card's content.
-                </b-card-text>
-            </b-card>
+                Some quick example text to build on the card and make up the bulk of the card's content.
+                Some quick example text to build on the card and make up the bulk of the card's content.
+                Some quick example text to build on the card and make up the bulk of the card's content.
+                Some quick example text to build on the card and make up the bulk of the card's content.
+            </b-card-text>
+            
+            <img src="https://picsum.photos/600/300/?image=22">
+
+            <b-card-text>
+                Some quick example text to build on the card and make up the bulk of the card's content.
+                Some quick example text to build on the card and make up the bulk of the card's content.
+                Some quick example text to build on the card and make up the bulk of the card's content.
+                Some quick example text to build on the card and make up the bulk of the card's content.
+                Some quick example text to build on the card and make up the bulk of the card's content.
+            </b-card-text>
         </div>
     </div>
 
 
-    <FooterSample />
+    
 
 </div>
 </template>
@@ -122,8 +142,8 @@
 <script>
 
 
-import FooterSample from '@/components/Footer.vue'
-//import Bread from '@/components/BreadCrumb'
+
+import Bread from '@/components/BreadCrumb'
 export default {
   name: 'Products',
   data(){
@@ -143,8 +163,8 @@ export default {
 	}
   },
   components: {
-        FooterSample,
-        //Bread
+        
+        Bread
   },
   methods:{
      change(change_num){
@@ -162,7 +182,7 @@ export default {
 
 .products{
     
-    height:500px;
+    height:1000px;
 }
 
 .products h1{
@@ -170,8 +190,12 @@ export default {
     text-align: center;
     padding-top: 20px;
     padding-bottom: 20px;
+    border-bottom:2px solid gray;
 }
 
+.prod_content1 p{
+    margin-left : 0px;
+}
 .products h3{
 
     text-align: center;
@@ -192,22 +216,39 @@ export default {
     margin-top:90px;
 }
 
+.prod_menu #button_title{
+
+    background-color: unset;
+    border:0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+    font-size:30px;
+    font-weight:bold;
+    padding-left:30px;
+
+}
+
 .prod_menu #button{
     background-color: unset;
+    border:0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+    font-size:20px;
+    font-weight:bold;
+    margin-left:10px;
 }
 
-.tech_content{
+.prod_content{
     float: left;
     height: 500px;
+    
 }
 
-.tech_content h3{
+.prod_content h3{
     text-align:left;
     padding-top:50px;
 
 }
 
-.tech_content1 .text-white{
+.prod_content1 .text-white{
     width:600px;
     height: 100px;
     float:left;
@@ -215,14 +256,14 @@ export default {
 }
 
 .card-img{
-    opacity: 0.8;
+    opacity: 0.3;
 }
 
-.tech_content .text-white{
+.prod_content .text-white{
     width:200px;
     height: 100px;
     float:left;
-    margin:130px 20px 10px 20px;
+    margin:80px 20px 10px 80px;
 }
 
 
@@ -243,6 +284,23 @@ export default {
     width:200px;
     height: 100px;
     float: right;
+}
+
+.prod_content1{
+    width:60%;
+    float:left;
+    margin:60px;
+}
+
+.prod_content1 .text-white{
+    background-color:inherit;
+    border:0;
+    color:rgb(44, 44, 44);
+}
+
+.prod_content1  .position-relative{
+    width:1000px;
+    margin-left:50px;
 }
 </style>
 

@@ -17,7 +17,10 @@ export default new Router({
 		  path: '/',
 		  name: 'Home',
 		  component: Home,
-
+		  afterEach:() => {
+			document.body.scrollTop = 0;
+			document.documentElement.scrollTop = 0;
+},
 		  meta: {
 			breadcrumb: '首頁'
 		  },
@@ -32,7 +35,8 @@ export default new Router({
 							document.documentElement.scrollTop = 0;
 			},
 			meta: {
-				breadcrumb: '最新消息'
+				text: '最新消息',
+				to : { name : LongyiNews } 
 			}
 
 	},
@@ -45,7 +49,8 @@ export default new Router({
 						document.documentElement.scrollTop = 0;
 		},
 		meta: {
-			breadcrumb: '最新消息'
+			text: '最新消息',
+			to : { name : LongyiNews } 
 		}
 
 	},
@@ -58,7 +63,8 @@ export default new Router({
 						document.documentElement.scrollTop = 0;
 		},
 		meta: {
-			breadcrumb: '聯絡我們'
+			text: '聯絡我們',
+			to : { name : ContactUs } 
 		}
 
 	},
@@ -71,7 +77,8 @@ export default new Router({
 						document.documentElement.scrollTop = 0;
 		},
 		meta: {
-			breadcrumb: '核心技術'
+			text: '核心技術',
+			to : { name : Technology } 
 		}
 
 	},
@@ -84,7 +91,8 @@ export default new Router({
 						document.documentElement.scrollTop = 0;
 		},
 		meta: {
-			breadcrumb: '產品介紹'
+			text: '產品介紹',
+			to : { name : Products } 
 		}
 
 	},
@@ -97,7 +105,8 @@ export default new Router({
 						document.documentElement.scrollTop = 0;
 		},
 		meta: {
-			breadcrumb: '關於瀧儀'
+			text: '關於瀧儀',
+			to : { name : AboutLongyi } 
 		}
 
 	},
@@ -110,7 +119,8 @@ export default new Router({
 						document.documentElement.scrollTop = 0;
 		},
 		meta: {
-			breadcrumb: '投資人專區'
+			text: '投資人專區',
+			to : { name : Invest } 
 		}
 
 	}

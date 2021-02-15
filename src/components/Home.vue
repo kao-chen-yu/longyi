@@ -6,27 +6,27 @@
    <hooper id = "hoopers" :settings="hooperSettings">
       <slide>
         <div class="images">
-          <img src="https://picsum.photos/600/300/?image=28" style="height:110vh;width:100%">
+          <img src="https://picsum.photos/1600/700/?image=28" style="height:110vh;width:100%">
         </div>
       </slide>
       <slide>          
         <div class="images">
-          <img src="https://picsum.photos/600/300/?image=39" style="height:110vh;width:100%">
+          <img src="https://picsum.photos/1600/700/?image=39" style="height:110vh;width:100%">
         </div> 
       </slide>
       <slide>          
         <div class="images">
-          <img src="https://picsum.photos/600/300/?image=32" style="height:110vh;width:100%">
+          <img src="https://picsum.photos/1600/700/?image=32" style="height:110vh;width:100%">
         </div>       
       </slide>
       <slide>  
         <div class="images">
-          <img src="https://picsum.photos/600/300/?image=21" style="height:110vh;width:100%">
+          <img src="https://picsum.photos/1600/700/?image=21" style="height:110vh;width:100%">
         </div> 
       </slide>
       <slide>     
         <div class="images">
-          <img src="https://picsum.photos/600/300/?image=22" style="height:110vh;width:100%">
+          <img src="https://picsum.photos/1600/700/?image=22" style="height:110vh;width:100%">
         </div>
       </slide>
         <hooper-navigation slot="hooper-addons">
@@ -41,7 +41,7 @@
         <hooper-pagination slot="hooper-addons"></hooper-pagination>
     </hooper>
 
-    <FooterSample />
+    
 
 </div>
 </template>
@@ -50,7 +50,7 @@
 <script>
  import { Hooper, Slide , Pagination as HooperPagination , Navigation as HooperNavigation} from 'hooper';
  import 'hooper/dist/hooper.css';
-  import FooterSample from './Footer.vue';
+  
 
 export default {
   name: 'Home',
@@ -58,8 +58,7 @@ export default {
       Hooper,
       Slide,
       HooperPagination,
-      HooperNavigation,
-      FooterSample
+      HooperNavigation
     },
   data () {
     return {

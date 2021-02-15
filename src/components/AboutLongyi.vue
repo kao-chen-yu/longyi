@@ -8,11 +8,15 @@
         </div>
     </div>
     
+    <Bread></Bread>
     <div class="abouts">
+                        
         <div class="about_menu">
             <b-list-group>
+                <b-list-group-item href="#" @click="change('1')" id="button_title">公司簡介</b-list-group-item>
                 <b-list-group-item href="#" @click="change('1')" id="button">公司簡介</b-list-group-item>
-                <b-list-group-item href="#" @click="change('2')" id="button">營運團隊</b-list-group-item>
+                <b-list-group-item href="#" @click="change('2')" id="button">發展沿革</b-list-group-item>
+                <b-list-group-item href="#" @click="change('2')" id="button">瀧儀團隊</b-list-group-item>
                 </b-list-group>
         
 
@@ -36,16 +40,15 @@
     </div>
 
 
-    <FooterSample />
-
+ 
 </div>
 </template>
 
 <script>
 
 
-import FooterSample from '@/components/Footer.vue'
-//import Bread from '@/components/BreadCrumb'
+
+import Bread from '@/components/BreadCrumb'
 export default {
   name: 'AboutLongyi',
   data(){
@@ -65,8 +68,8 @@ export default {
 	}
   },
   components: {
-        FooterSample,
-        //Bread
+       
+        Bread
   },
   methods:{
      change(change_num){
@@ -80,7 +83,7 @@ export default {
 
 <style scope>
 .banner_title .title{
-    font-family: "TaipeiSansTCBeta-Regular";
+    font-family: '微軟正黑體, "Microsoft JhengHei", Arial, Helvetica;';
 }
 
 .abouts{
@@ -88,8 +91,23 @@ export default {
     height:500px;
 }
 
+.about_menu #button_title{
+
+    background-color: unset;
+    border:0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+    font-size:30px;
+    font-weight:bold;
+    padding-left:30px;
+
+}
 .about_menu #button{
     background-color: unset;
+    border:0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+    font-size:20px;
+    font-weight:bold;
+    margin-left:10px;
 }
 
 .abouts h1{
@@ -100,9 +118,10 @@ export default {
 }
 
 .abouts h3{
-
-    
+    padding-bottom:20px;
+    border-bottom:2px solid rgba(0, 0, 0, 0.125);
     padding-top: 20px;
+    font-weight:bold;
     
 }
 .text-center{
@@ -116,7 +135,7 @@ export default {
     width:25%;
     float: left;
     height:inherit;
-    margin-top:90px;
+    margin-top:10px;
 }
 
 .tech_content{
@@ -127,7 +146,7 @@ export default {
 
 .tech_content h3{
     text-align:left;
-    padding-top:50px;
+    padding-top:0px;
 
 }
 
@@ -175,7 +194,8 @@ export default {
 
 .about_content1 .about_content{
     float: left;
-    padding:50px;
+    padding:0px 80px  !important;
+    width:70%;
 }
 </style>
 

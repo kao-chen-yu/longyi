@@ -30,7 +30,7 @@
             經濟部中小企業處2020中小企業商機媒合交流會新聞
         </a>
     </div>
-    <FooterSample />
+    
 
 </div>
 </template>
@@ -38,7 +38,7 @@
 <script>
 
 
-import FooterSample from '@/components/Footer.vue'
+
 import Bread from '@/components/BreadCrumb'
 export default {
   name: 'LongyiNew',
@@ -58,7 +58,7 @@ export default {
     }
   },
   components: {
-        FooterSample,
+        
         Bread
   },
   methods:{
@@ -81,7 +81,7 @@ export default {
 <style>
 
 .banner_title .title{
-    font-family: "TaipeiSansTCBeta-Regular";
+    font-family: '微軟正黑體, "Microsoft JhengHei", Arial, Helvetica;';
 }
 
 
