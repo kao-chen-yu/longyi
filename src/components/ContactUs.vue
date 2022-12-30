@@ -2,114 +2,23 @@
 
 <div>
 
-    <div class = "banner" :style ="banner">
-        <div class="banner_title">
-        <span class="title">聯絡我們</span>
-        </div>
+    <div class = "nav" >
+
     </div>
-    <Bread></Bread>
     <div class="contacts">
-
-        <b-card bg-variant="light" class="contact_right">
-                    <div class="contact_information">
-
-                        <div style="float: left;margin-left: 100px;">
-                        <div style="width: 500px; height: 200px;margin-left: 70%;">
-                          <p style="text-align: center;">瀧儀生醫科股份有限公司</p>
-                          <p class = "information">地址 : 高雄市路竹區北嶺里路科五路92號4樓B室</p>
-                          <p class = "information">電話 : 07-695-5080</p>
-                          <p class = "information">E-mail : lysbio7258@gmail.com</p>
-                        </div>                      
-                        <GmapMap                                           
-                        :center="{ lat: 22.827961, lng: 120.257980}"
-                        :zoom="18"
-                        style="width: 500px; height: 450px"
-                        >
-
-
-                        <GmapMarker
-                            :key="index"
-                            v-for="(m, index) in markers"
-                            :position="m.position"
-                            :clickable="true"
-                            :draggable="true"
-                            @click="toggleInfoWindow(m,i)"
-                        />
-                          <gmap-info-window 
-                          :options="infoOptions" 
-                          :position="infoWindowPos" 
-                          :opened="infoWinOpen" 
-                          @closeclick="infoWinOpen=false">
-                            
-                            <div class = "map_info">
-                            <p>{{infoContent}}</p>
-                            <p>{{infolocation}}</p>
-                            <b-button @click="openMap()">打開地圖</b-button>
-                            </div>
-                        </gmap-info-window>
-
-                        </GmapMap>
-                        </div>
-                        </div>
-
-                        <div style = "float: left;width: 40%;margin-left: 60px;height: 600px;margin-top: 200px;">
-                          <b-form @submit="onSubmit">    
-                            
-                            <b-form-group
-                                label="姓名 : "
-                                label-for="nested-street"
-                                label-cols-sm="2"
-                                label-size="lg" 
-                                :invalid-feedback="invalidFeedback"
-                                :state="state"
-                            >
-                            
-                                <b-form-input id="nested-street" v-model="form.name"></b-form-input>
-                            </b-form-group>
-                           <b-form-group
-                                label="連絡電話 : "
-                                label-for="nested-street"
-                                label-cols-sm="2"
-                                label-size="lg" 
-                                :invalid-feedback="invalidFeedback1"
-                                :state="state1"
-                            >
-                                <b-form-input id="nested-street" v-model="form.contractNumber"></b-form-input>
-                            </b-form-group>
-                            <b-form-group
-                                label="E-mail: "
-                                label-for="nested-city"
-                                label-cols-sm="2"
-                                label-size="lg" 
-                                :invalid-feedback="invalidFeedback2"
-                                :state="state2"
-                            >
-                                <b-form-input id="nested-city" v-model="form.email"></b-form-input>
-                            </b-form-group>
-
-                            <b-form-group
-                                label="意見:"
-                                label-for="nested-state"
-                                label-cols-sm="2"
-                                label-size="lg" 
-                            >
-                            <b-form-textarea
-                            id="textarea"
-                            v-model="form.message"
-                            placeholder="Enter something..."
-                            rows="3"
-                            max-rows="6"
-                            ></b-form-textarea>
-
-                            
-                            </b-form-group>
-                            <b-button type="submit" style="margin-top:20px; margin-left:85%;">確定送出</b-button>
-                            </b-form>
-
-                        </div>
-
-        </b-card>
-
+        <div class="footer-icon">
+              <font-awesome-icon :icon="['fas', 'phone']" size="5x"/>
+              </br></br><span class = "icon-title">服務專線 (上班時間)</span>
+              </br><span class = "icon-info"> 0932450984 </span>
+        </div><div class="footer-icon">
+              <font-awesome-icon class="icon" :icon="['fas', 'pen-square']" size="5x"/>
+              </br></br><span class = "icon-title">專員紀錄</span>
+              </br><span class = "icon-info">將有專員紀錄 與您預約最佳時間</span>
+        </div><div class="footer-icon">
+              <font-awesome-icon class="icon" :icon="['fas', 'user']" size="5x"/>
+              </br></br><span class = "icon-title">到府預約估價</span>
+              </br><span class = "icon-info">當天將有師傅再次聯絡確認，到府免費估價</span>
+        </div>
 
     </div>
 
@@ -135,9 +44,9 @@ export default {
 
         markers: [
         {
-          position: { lat: 22.827961, lng: 120.257980 },
-          infoText: '瀧儀生醫科股份有限公司',
-          location: '高雄市路竹區北嶺里路科五路92號4樓B室'
+          position: { lat: 23.03988442119841, lng: 120.1871286515133 },
+          infoText: '瀚升建設開發有限公司',
+          location: '海環街6巷7號'
         }
       ],
       distance: 0,
@@ -220,8 +129,24 @@ export default {
 
 
 <style>
+.icon-title{
+  font-weight: bolder;
+  font-size: 1.25rem;
+}
+
+.icon-info{
+  
+  font-size: 1rem;
+}
+.footer-icon{
+    width: 10%;
+    height: 10%;
+    float: left;
+    margin: 10% 10% 10% 10%;
+}
 .contacts{
-    height:700px;
+    margin-left: 10%;
+    height:500px;
 }
 #contact_card{
     width:50%;

@@ -8,7 +8,7 @@ import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap-vue/dist/bootstrap-vue.css';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { faFacebook, faInstagram ,faYoutube} from '@fortawesome/free-brands-svg-icons';
-import { faAngleRight } from '@fortawesome/free-solid-svg-icons';
+import { faAngleRight , faUserSecret , faPhone , faPenSquare , faUser , faHouseUser} from '@fortawesome/free-solid-svg-icons';
 import { faGooglePlus } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 import VueBreadcrumbs from 'vue-breadcrumbs';
@@ -18,10 +18,20 @@ import axios from 'axios';
 import "./style/index.css"
 Vue.prototype.$axios = axios;
 
+/* import the fontawesome core */
+
+
+/* import font awesome icon component */
+
+
+
+/* add icons to the library */
+
+
 /* 註冊所有組件為全域 */
 Vue.use(BootstrapVue);
 Vue.use(VueBreadcrumbs)
-library.add(faInstagram, faFacebook, faYoutube , faAngleRight ,faGooglePlus);
+library.add(faInstagram, faFacebook, faYoutube , faAngleRight ,faGooglePlus ,faUserSecret , faPhone , faPenSquare , faUser , faHouseUser);
 Vue.component('font-awesome-icon', FontAwesomeIcon)
 Vue.component('jw-pagination', JwPagination);
 
@@ -31,6 +41,5 @@ Vue.config.productionTip = false
 new Vue({
   el: '#app',
   router,
-  components: { App },
-  template: '<App/>'
+  render: h => h(App)
 })

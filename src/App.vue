@@ -33,7 +33,7 @@ nav.breadcrumbs ul li:first-child:before {
             display: none;
 }
 body{font-family: '微軟正黑體, "Microsoft JhengHei", Arial, Helvetica;' !important;
-     background-color :aliceblue !important;
+     background-color :rgba(255, 255, 255, 0.075) !important;
 }
 
 .banner_title{

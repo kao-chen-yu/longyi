@@ -27,7 +27,7 @@ export default new Router({
 		  
     },
 	{ 
-			path: '/longyi_news',  
+			path: '/hansu_news',  
 			name: 'LongyiNews',
 			component: LongyiNews,
 			afterEach:() => {
@@ -38,20 +38,6 @@ export default new Router({
 				text: '最新消息',
 				to : { name : LongyiNews } 
 			}
-
-	},
-	{ 
-		path: '/longyi_new',  
-		name: 'LongyiNew',
-		component: LongyiNew,
-		afterEach:() => {
-						document.body.scrollTop = 0;
-						document.documentElement.scrollTop = 0;
-		},
-		meta: {
-			text: '最新消息',
-			to : { name : LongyiNews } 
-		}
 
 	},
 	{ 
@@ -69,30 +55,16 @@ export default new Router({
 
 	},
 	{ 
-		path: '/technology',  
-		name: 'Technology',
-		component: Technology,
+		path: '/invest',  
+		name: 'Invest',
+		component: Invest,
 		afterEach:() => {
 						document.body.scrollTop = 0;
 						document.documentElement.scrollTop = 0;
 		},
 		meta: {
-			text: '核心技術',
-			to : { name : Technology } 
-		}
-
-	},
-	{ 
-		path: '/products',  
-		name: 'Products',
-		component: Products,
-		afterEach:() => {
-						document.body.scrollTop = 0;
-						document.documentElement.scrollTop = 0;
-		},
-		meta: {
-			text: '產品介紹',
-			to : { name : Products } 
+			text: '過往建案',
+			to : { name : Invest } 
 		}
 
 	},
@@ -105,24 +77,11 @@ export default new Router({
 						document.documentElement.scrollTop = 0;
 		},
 		meta: {
-			text: '關於瀧儀',
+			text: '關於瀚升',
 			to : { name : AboutLongyi } 
 		}
 
 	},
-	{ 
-		path: '/invest',  
-		name: 'Invest',
-		component: Invest,
-		afterEach:() => {
-						document.body.scrollTop = 0;
-						document.documentElement.scrollTop = 0;
-		},
-		meta: {
-			text: '投資人專區',
-			to : { name : Invest } 
-		}
 
-	}
   ]
 })
