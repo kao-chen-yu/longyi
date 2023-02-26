@@ -3,12 +3,12 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
-import BootstrapVue from 'bootstrap-vue';
+import { BootstrapVue, BootstrapVueIcons } from 'bootstrap-vue'
 import 'bootstrap/dist/css/bootstrap.css'; 
 import 'bootstrap-vue/dist/bootstrap-vue.css';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { faFacebook, faInstagram ,faYoutube} from '@fortawesome/free-brands-svg-icons';
-import { faAngleRight , faUserSecret , faPhone , faPenSquare , faUser , faHouseUser} from '@fortawesome/free-solid-svg-icons';
+import { faAngleRight , faUserSecret , faPhone , faPenSquare , faUser , faHouseUser } from '@fortawesome/free-solid-svg-icons';
 import { faGooglePlus } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 import VueBreadcrumbs from 'vue-breadcrumbs';
@@ -18,16 +18,9 @@ import axios from 'axios';
 import "./style/index.css"
 Vue.prototype.$axios = axios;
 
-/* import the fontawesome core */
 
 
-/* import font awesome icon component */
-
-
-
-/* add icons to the library */
-
-
+Vue.use(BootstrapVueIcons)
 /* 註冊所有組件為全域 */
 Vue.use(BootstrapVue);
 Vue.use(VueBreadcrumbs)
@@ -41,5 +34,6 @@ Vue.config.productionTip = false
 new Vue({
   el: '#app',
   router,
-  render: h => h(App)
+  components: { App },
+  template: '<App/>'
 })

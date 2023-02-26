@@ -2,23 +2,34 @@
 
 <div>
 
-    <div class = "nav" >
-
-    </div>
-    <div class="contacts">
-        <div class="footer-icon">
-              <font-awesome-icon :icon="['fas', 'phone']" size="5x"/>
-              </br></br><span class = "icon-title">服務專線 (上班時間)</span>
-              </br><span class = "icon-info"> 0932450984 </span>
-        </div><div class="footer-icon">
-              <font-awesome-icon class="icon" :icon="['fas', 'pen-square']" size="5x"/>
-              </br></br><span class = "icon-title">專員紀錄</span>
-              </br><span class = "icon-info">將有專員紀錄 與您預約最佳時間</span>
-        </div><div class="footer-icon">
-              <font-awesome-icon class="icon" :icon="['fas', 'user']" size="5x"/>
-              </br></br><span class = "icon-title">到府預約估價</span>
-              </br><span class = "icon-info">當天將有師傅再次聯絡確認，到府免費估價</span>
+    <div class = "banner" :style ="banner">
+        <div class="banner_title">
+        <span class="title">聯絡我們</span>
         </div>
+    </div>
+  
+    <div class="contacts">
+
+        <b-card bg-variant="light" class="contact_right">
+                    <div class="contact_information">
+
+                        <div style="float: left;margin-left: 10%;margin-top: 5%;">
+                        <div style="width: 100%;margin-left: 20%;">
+                          <p style="text-align: center;">喬威建築師事務所-臺南事務所</p>
+                          <p class = "information">地址 : 台南市北區大興街192巷28號</p>
+                          <p class = "information">電話 : 06-2503927</p>
+                        </div>                      
+                        
+                        <div style="width: 100%;margin-left: 20%;">
+                          <p style="text-align: center;">喬威建築師事務所-臺中事務所</p>
+                          <p class = "information">地址 : 臺中市西屯區臺灣大道四段671巷28號</p>
+                          <p class = "information">電話 : 04-23505561</p>
+                        </div>               
+                        </div>
+                        </div>
+
+        </b-card>
+
 
     </div>
 
@@ -44,9 +55,9 @@ export default {
 
         markers: [
         {
-          position: { lat: 23.03988442119841, lng: 120.1871286515133 },
-          infoText: '瀚升建設開發有限公司',
-          location: '海環街6巷7號'
+          position: { lat: 22.827961, lng: 120.257980 },
+          infoText: '瀧儀生醫科股份有限公司',
+          location: '高雄市路竹區北嶺里路科五路92號4樓B室'
         }
       ],
       distance: 0,
@@ -129,23 +140,7 @@ export default {
 
 
 <style>
-.icon-title{
-  font-weight: bolder;
-  font-size: 1.25rem;
-}
-
-.icon-info{
-  
-  font-size: 1rem;
-}
-.footer-icon{
-    width: 10%;
-    height: 10%;
-    float: left;
-    margin: 10% 10% 10% 10%;
-}
 .contacts{
-    margin-left: 10%;
     height:500px;
 }
 #contact_card{

@@ -3,15 +3,15 @@
 <div>
    
    <b-navbar fixed = "top" toggleable="lg" type="light" variant="light" >
-
-    <div class = "all-navbar">
     <a href="#" @click="goHome">
-      <font-awesome-icon :icon="['fas', 'house-user']" size="2x"  style = "color:black;"/>
-      <span class= "nav-title">瀚升建設</span>
+      <img src="./../assets/logo-02.png" width="200px" height="100px">
      </a>
-        <b-navbar-brand href="#"  class = "navb">熱銷建案</b-navbar-brand>
-        <b-navbar-brand href="#" @click="goInvest" class = "navb">建案一覽</b-navbar-brand>
-        <b-navbar-brand href="#" @click="goContact" class = "navb">聯絡合作</b-navbar-brand>
+    <div class = "all-navbar">
+        
+        <b-navbar-brand href="#" @click="goAboutLongyi" class = "navb">關於喬威</b-navbar-brand>
+        <b-navbar-brand href="#" @click="goTech" class = "navb">精選作品</b-navbar-brand>
+        <b-navbar-brand href="#" @click="goInvest" class = "navb">服務項目</b-navbar-brand>
+        <b-navbar-brand href="#" @click="goContact" class = "navb">聯絡我們</b-navbar-brand>
 
     </div>
   </b-navbar>
@@ -54,22 +54,17 @@
 </script>
 
 <style scope>
-.nav-title {
-    color: black;
-    font-family: '微軟正黑體, "Microsoft JhengHei", Arial, Helvetica;' !important;
-    font-weight: bold;
-    font-size: x-large;
-}
+
 .all-navbar .navb{
   position: relative;
   left: 0px;
-  color:#343a40;
+  color:#063456;
   font-weight: bold;
   text-align:center;
 }
 
 .navbar-light .navbar-brand{
-  color:#343a40 !important;
+  color:#063456 !important;
   font-size:15px;
   margin-left:20px;
 }
@@ -77,9 +72,9 @@
 .all-navbar{
     position: relative;
     font-family:'微軟正黑體, "Microsoft JhengHei", Arial, Helvetica;';
-    left: 30%;
+    left: 50px;
     margin-left:30%;
-    color:#343a40;
+    color:#063456;
 }
 
 .sticky-top{
@@ -92,7 +87,6 @@
 
 .bg-light {
    height : 100px;
-   
 }
 
 </style>
