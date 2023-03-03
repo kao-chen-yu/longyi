@@ -4,8 +4,11 @@
    
    <b-navbar fixed = "top" toggleable="lg" type="light" variant="light" >
     <a href="#" @click="goHome">
-      <img src="./../assets/logo-02.png" width="200px" height="100px">
+      <img src="./../assets/logo.png" width="200px" height="100px">
      </a>
+     <div>
+     <h3>喬威建築師事務所</h3>
+     </div>
     <div class = "all-navbar">
         
         <b-navbar-brand href="#" @click="goAboutLongyi" class = "navb">關於喬威</b-navbar-brand>
