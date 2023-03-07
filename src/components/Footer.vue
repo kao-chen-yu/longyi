@@ -5,7 +5,7 @@
      <footer>
         <div class="footer_longyi">
             <div class="container">
-                <img class="logo" width="200" height="200" src="./../assets/logo.png">
+                <img class="logo" width="100" height="100" src="./../assets/logo.png">
                 <div>
                     <div class="footer-text">
                     <p>喬威建築師事務所</p>
@@ -35,7 +35,7 @@
    bottom: 0;
    width: 100%;
    height: 200px;
-   background:linear-gradient(white,#7BC5AE);
+   background:linear-gradient(white,rgb(69, 65, 92));
    color: white;
    padding-left:300px;
 }
@@ -43,7 +43,7 @@
 .footer_longyi .logo {
     
     float:left;
-
+    margin-top:50px;
 }
 
 .footer_longyi .footer-text{

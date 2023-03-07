@@ -2,12 +2,12 @@
 
 <div>
    
-   <b-navbar fixed = "top" toggleable="lg" type="light" variant="light" >
+   <b-navbar fixed = "top" toggleable="lg"   style="background-color: rgb(69 65 92);">
     <a href="#" @click="goHome">
-      <img src="./../assets/logo.png" width="200px" height="100px">
+      <img src="./../assets/logo.png" width="100px" height="100px">
      </a>
      <div>
-     <h3>喬威建築師事務所</h3>
+     <h3 style="color: white;margin: 20px 60px 10px 0px;">喬威建築師事務所</h3>
      </div>
     <div class = "all-navbar">
         
@@ -67,9 +67,9 @@
 }
 
 .navbar-light .navbar-brand{
-  color:#063456 !important;
-  font-size:15px;
-  margin-left:20px;
+  color:white !important;
+  font-size:20px;
+  margin-left:12px;
 }
 
 .all-navbar{

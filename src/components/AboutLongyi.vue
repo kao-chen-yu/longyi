@@ -11,10 +11,9 @@
     
     <div class="abouts">
                         
-        <div class="about_menu">
+        <div class="container about_menu">
             <b-list-group>
-                <b-list-group-item href="#" @click="change('1')" id="button">事務所介紹</b-list-group-item>
-                <b-list-group-item href="#" @click="change('2')" id="button">喬威團隊成員</b-list-group-item>
+                <b-list-group-item href="#" @click="change('1')" id="button">喬威事務所介紹</b-list-group-item>
                 </b-list-group>
         
 
@@ -22,14 +21,50 @@
 
         <div class ="about_content2" v-if="show === '1'">
             <div class="about_content">
-                <h3>喬威事務所簡介</h3>
+                <h3>喬威事務所介紹</h3>
                 <span style="font-size: larger;font-weight: bolder;">王金城建築師為本所主持建築師，其個人擁有30年建築規劃設計與監造管理之經驗，其工作團隊人員主要來自國內多所知名建築師事務所規劃設計人才、營造廠的資深專業人員，除了專擅於各類公共工程之工程規劃、設計、監造及專業管理等技術服務外，本事務所特別著重各階段之行政程序與業主需求，適時提供執行方案，以確保計畫均能「如期、如質、如價」的完成，提供最完整的專業服務。本工作團隊曾執行各類型工程服務工作，包括有學校、活動中心、文創園區、體育館、飯店及住宅大樓等規劃、設計及監造服務工作。</span>
+            
+            <h3></h3>
+                
+            
+            <b-card 
+            title="主持建築師：王金城"
+            img-src="https://placekitten.com/300/300" img-alt="Card image" img-left class="mb-3">
+            <b-card-text>
+                現職：開業建築師
+                建築物室內裝修專業技術人員 
+                臺南市建築師公會會員
+                土木技師
+            </b-card-text>
+            <b-card-text>
+                專長：土木建築規劃設計
+                工程監造
+                建物安全鑑定
+                專案管理(PCM)
+            </b-card-text>
+            </b-card>
+
+            <b-card 
+            title="建築師：王政荃"
+            img-src="https://placekitten.com/300/300" img-alt="Card image" img-right class="mb-3">
+            <b-card-text>
+                現職：建築師
+                建築物室內裝修專業技術人員 
+
+            </b-card-text>
+            <b-card-text>
+                專長：建築規劃設計
+                室內設計
+                估價
+                預算編列
+            </b-card-text>
+            </b-card>
             </div>
         </div>
 
         <div class ="about_content1" v-if="show === '2'">
             <div class="about_content">
-                <h3>喬威事務所營運團隊</h3>
+            <h3>喬威事務所營運團隊</h3>
                 
             
             <b-card 
@@ -234,7 +269,7 @@ export default {
 } 
 
 .about_content2{
-    height:500px;
+    height:1100px;
 }
 .about_menu #button_title{
 
