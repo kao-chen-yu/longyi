@@ -5,12 +5,9 @@
      <footer>
         <div class="footer_longyi">
             <div class="container">
-                <img class="logo" width="100" height="100" src="./../assets/logo.png">
                 <div>
                     <div class="footer-text">
-                    <p>喬威建築師事務所</p>
-                    <p>台南市北區大興街192巷28號</p>
-                    <p>營業時間 : 週一至週五8:00至17:00</p>
+                    <p>喬威建築師事務所 (台南市北區大興街192巷28號 )</p>
                     <p style="width: 550px;">Tel：06-2503927| Email:chiauwei2858178@gmail.com| 統編:47769565</p>
                     
                     </div>
@@ -34,10 +31,10 @@
    left: 0;
    bottom: 0;
    width: 100%;
-   height: 200px;
+   height: 100px;
    background:linear-gradient(white,rgb(69, 65, 92));
    color: white;
-   padding-left:300px;
+   
 }
 
 .footer_longyi .logo {

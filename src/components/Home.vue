@@ -91,7 +91,7 @@ h2 {
   color: #fff
 }
 #hoopers {
-  height: 95vh;
+  height: 80vh;
 }
 
 .footer {
