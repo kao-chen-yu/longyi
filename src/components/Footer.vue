@@ -46,7 +46,7 @@
 .footer_longyi .footer-text{
   padding-top:40px;
   width:50%;
-  margin-left:50px;
+  margin-left:400px;
   margin-right:0px;
   float: left;
 }

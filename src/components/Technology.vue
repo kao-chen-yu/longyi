@@ -9,55 +9,9 @@
     </div>
     
     <div class="technologies">
-        <div class="tech_menu">
-            <b-list-group>
-                <b-list-group-item href="#"  id="button_title">精選作品</b-list-group-item>
-                <b-list-group-item href="#" v-b-toggle="'collapse-1'" @click="change('1')" id="button">住宅</b-list-group-item>
-                <b-collapse  visible id="collapse-1" accordion="my-accordion">
-                    <b-list-group-item class = "sub"  href="#" @click="change_sub('1')" id="sub_button">實績</b-list-group-item>
-                    <b-list-group-item class = "sub"  href="#" @click="change_sub('2')" id="sub_button">規劃中</b-list-group-item>
-                    <b-list-group-item class = "sub"  href="#" @click="change_sub('3')" id="sub_button">完工</b-list-group-item>
-                </b-collapse>
-                <b-list-group-item href="#" v-b-toggle="'collapse-2'" @click="change('2')" id="button">店鋪住宅</b-list-group-item>
-                <b-collapse   id="collapse-2" accordion="my-accordion">
-                    <b-list-group-item class = "sub"  href="#" @click="change_sub('1')" id="sub_button">實績</b-list-group-item>
-                    <b-list-group-item class = "sub"  href="#" @click="change_sub('2')" id="sub_button">規劃中</b-list-group-item>
-                    <b-list-group-item class = "sub"  href="#" @click="change_sub('3')" id="sub_button">完工</b-list-group-item>
-                </b-collapse>
-                <b-list-group-item href="#" v-b-toggle="'collapse-3'" @click="change('3')" id="button">店鋪</b-list-group-item>
-                <b-collapse   id="collapse-3" accordion="my-accordion">
-                    <b-list-group-item class = "sub"  href="#" @click="change_sub('1')" id="sub_button">實績</b-list-group-item>
-                    <b-list-group-item class = "sub"  href="#" @click="change_sub('2')" id="sub_button">規劃中</b-list-group-item>
-                    <b-list-group-item class = "sub"  href="#" @click="change_sub('3')" id="sub_button">完工</b-list-group-item>
-                </b-collapse>
-                <b-list-group-item href="#" v-b-toggle="'collapse-4'" @click="change('4')" id="button">宗教</b-list-group-item>
-                <b-collapse   id="collapse-4" accordion="my-accordion">
-                    <b-list-group-item class = "sub"  href="#" @click="change_sub('1')" id="sub_button">實績</b-list-group-item>
-                    <b-list-group-item class = "sub"  href="#" @click="change_sub('2')" id="sub_button">規劃中</b-list-group-item>
-                    <b-list-group-item class = "sub"  href="#" @click="change_sub('3')" id="sub_button">完工</b-list-group-item>
-                </b-collapse>             
-                <b-list-group-item href="#" v-b-toggle="'collapse-5'" @click="change('5')" id="button">廠房 & 辦公大樓</b-list-group-item>
-                <b-collapse   id="collapse-5" accordion="my-accordion">
-                    <b-list-group-item class = "sub"  href="#" @click="change_sub('1')" id="sub_button">實績</b-list-group-item>
-                    <b-list-group-item class = "sub"  href="#" @click="change_sub('2')" id="sub_button">規劃中</b-list-group-item>
-                    <b-list-group-item class = "sub"  href="#" @click="change_sub('3')" id="sub_button">完工</b-list-group-item>
-                </b-collapse>               
-                <b-list-group-item href="#" v-b-toggle="'collapse-6'" @click="change('6')" id="button">其他</b-list-group-item>
-                <b-collapse   id="collapse-6" accordion="my-accordion">
-                    <b-list-group-item class = "sub"  href="#" @click="change_sub('1')" id="sub_button">實績</b-list-group-item>
-                    <b-list-group-item class = "sub"  href="#" @click="change_sub('2')" id="sub_button">規劃中</b-list-group-item>
-                    <b-list-group-item class = "sub" href="#"  @click="change_sub('3')" id="sub_button">完工</b-list-group-item>
-                </b-collapse>               
-                </b-list-group>
-        
-
-        </div>
-
 
         <div class ="tech_content1" v-show="show === '1'">
-
-            <h1 v-show="sub_show === '1'">實績</h1>
-
+            <h1 v-show="sub_show === '1'">精選作品</h1>
                <b-carousel
                 id="carousel-1"
                 v-model="slide"
@@ -73,96 +27,27 @@
                 v-show="sub_show === '1'"
                 >
                 <!-- Text slides with image -->
+                
                 <b-carousel-slide
-                    caption="First slide"
-                    text="Nulla vitae elit libero, a pharetra augue mollis interdum."
-                    img-src="https://picsum.photos/1024/480/?image=52"
+                    v-for="item in carouselItems"
+                    :key="item.id"
+                    :caption="item.text"
+                    :img-src="item.image"
                 ></b-carousel-slide>
 
-                <!-- Slides with custom text -->
-                <b-carousel-slide img-src="https://picsum.photos/1024/480/?image=54">
-                    <h1>Hello world!</h1>
-                </b-carousel-slide>
-
-                <!-- Slides with image only -->
-                <b-carousel-slide img-src="https://picsum.photos/1024/480/?image=58"></b-carousel-slide>
-
-                <!-- Slides with img slot -->
-                <!-- Note the classes .d-block and .img-fluid to prevent browser default image alignment -->
-                <b-carousel-slide>
-                    <template #img>
-                    <img
-                        class="d-block img-fluid w-100"
-                        width="1024"
-                        height="480"
-                        src="https://picsum.photos/1024/480/?image=55"
-                        alt="image slot"
-                    >
-                    </template>
-                </b-carousel-slide>
-
-                <!-- Slide with blank fluid image to maintain slide aspect ratio -->
-                <b-carousel-slide caption="Blank Image" img-blank img-alt="Blank image">
-                    <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eros felis, tincidunt
-                    a tincidunt eget, convallis vel est. Ut pellentesque ut lacus vel interdum.
-                    </p>
-                </b-carousel-slide>
+                <p  class="mt-4">
+                    坪數 #: {{ slide }}<br>
+                    Sliding: {{ sliding }}
+                </p>
                 </b-carousel>
 
-                <p class="mt-4" v-show="sub_show === '1'">
-                Slide #: {{ slide }}<br>
-                Sliding: {{ sliding }}
-                </p>
-            <h1 v-show="sub_show === '2'">規劃中</h1>
-            <h1 v-show="sub_show === '3'">完工</h1>
+                
+
         </div>
 
-        <div class ="tech_content1" v-show="show === '2'">
-            
-            <h1>規劃中</h1>
-            <b-card-text>
-                Some quick example text to build on the card and make up the bulk of the card's content.
-                Some quick example text to build on the card and make up the bulk of the card's content.
-                Some quick example text to build on the card and make up the bulk of the card's content.
-                Some quick example text to build on the card and make up the bulk of the card's content.
-                Some quick example text to build on the card and make up the bulk of the card's content.
-            </b-card-text>
-            
-            <img src="https://picsum.photos/600/300/?image=19">
 
-            <b-card-text>
-                Some quick example text to build on the card and make up the bulk of the card's content.
-                Some quick example text to build on the card and make up the bulk of the card's content.
-                Some quick example text to build on the card and make up the bulk of the card's content.
-                Some quick example text to build on the card and make up the bulk of the card's content.
-                Some quick example text to build on the card and make up the bulk of the card's content.
-            </b-card-text>
-            
-        </div>
 
-                <div class ="tech_content1" v-show="show === '3'">
-            
-            <h1>寵物精準大健康平台</h1>
-            <b-card-text>
-                Some quick example text to build on the card and make up the bulk of the card's content.
-                Some quick example text to build on the card and make up the bulk of the card's content.
-                Some quick example text to build on the card and make up the bulk of the card's content.
-                Some quick example text to build on the card and make up the bulk of the card's content.
-                Some quick example text to build on the card and make up the bulk of the card's content.
-            </b-card-text>
-            
-            <img src="https://picsum.photos/600/300/?image=21">
 
-            <b-card-text>
-                Some quick example text to build on the card and make up the bulk of the card's content.
-                Some quick example text to build on the card and make up the bulk of the card's content.
-                Some quick example text to build on the card and make up the bulk of the card's content.
-                Some quick example text to build on the card and make up the bulk of the card's content.
-                Some quick example text to build on the card and make up the bulk of the card's content.
-            </b-card-text>
-            
-        </div>
     </div>
 
 
@@ -186,7 +71,7 @@ export default {
           wheelControl:false,
           
       },
-         about:{
+        about:{
             backgroundImage:"url(" + require("./../assets/background.jpg") + ")"
         },
         form: {
@@ -197,6 +82,31 @@ export default {
         show:'1',
         sub_show:'1',
         visible:[true,false,false,false,false,false],
+        images : [
+            require('@/assets/b1/1.jpg'),
+            require('@/assets/b1/2.jpg'),
+            require('@/assets/b1/3.jpg')
+        ],
+        carouselItems: [
+        {
+          id: 1,
+          image: require('@/assets/b1/1.jpg'),
+          text: "臺南市永康區塩南段-方氏-私人住宅",
+          slide : "452㎡"
+        },
+        {
+          id: 2,
+          image: require('@/assets/b1/2.jpg'),
+          text: "臺南市新化區頂山腳段-黃氏-私人住宅",
+          slide : "229.54㎡"
+        },
+        {
+          id: 3,
+          image: require('@/assets/b1/3.jpg'),
+          text: "臺南市安南區海中段-李氏-私人住宅",
+          slide : "229.54㎡"
+        }
+      ],
 	}
   },
   components: {
@@ -214,6 +124,9 @@ export default {
          this.sub_show = change_num;
          
      },
+     getImages(){
+        
+     }
   }
 }
 </script>
@@ -223,7 +136,7 @@ export default {
 
 
 .technologies{   
-    height:1000px;
+    height:650px;
 }
 
 .technologies h1{
@@ -298,7 +211,8 @@ export default {
 .tech_content1{
     width:60%;
     float:left;
-    margin:60px;
+    
+    margin-left:250px;
 }
 .tech_content1 .text-white{
     width:600px;

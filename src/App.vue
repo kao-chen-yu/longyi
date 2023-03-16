@@ -44,7 +44,7 @@ body{font-family: '微軟正黑體, "Microsoft JhengHei", Arial, Helvetica;' !im
     text-align: center;
 }
 .banner{
-    height:400px;
+    height:300px;
 }
 
 .banner .title {
