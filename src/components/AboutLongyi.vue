@@ -287,7 +287,7 @@ export default {
     border-bottom: 1px solid rgba(0, 0, 0, 0.125);
     font-size:20px;
     font-weight:bold;
-    margin-left:10px;
+    margin-left:5vw;
 }
 
 .abouts h1{
@@ -298,9 +298,9 @@ export default {
 }
 
 .abouts h3{
-    padding-bottom:20px;
+    padding-bottom:5vh;
     border-bottom:2px solid rgba(0, 0, 0, 0.125);
-    padding-top: 20px;
+    padding-top: 5vh;
     font-weight:bold;
     
 }
@@ -386,11 +386,17 @@ export default {
 
 .about_content2 .about_content{
     float: left;
-    padding:0px 80px  !important;
-    width:70%;
+    padding: 0px 8vw !important;
+    width: 70vw;
 }
 .card-title {
+    padding-top: 8vh;
+    padding-left: 1vw;
     font-weight: 1000;
+}
+
+.card-text{
+    padding-left: 1vw;
 }
 </style>
 

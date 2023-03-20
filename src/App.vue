@@ -37,14 +37,14 @@ body{font-family: '微軟正黑體, "Microsoft JhengHei", Arial, Helvetica;' !im
 }
 
 .banner_title{
-    top : 30%;
+    top : 20vh;
     position: absolute;;
     font-family: '微軟正黑體, "Microsoft JhengHei", Arial, Helvetica;';
     width:100%;
     text-align: center;
 }
 .banner{
-    height:300px;
+    height:40vh;
 }
 
 .banner .title {

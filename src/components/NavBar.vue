@@ -75,8 +75,8 @@
 .all-navbar{
     position: relative;
     font-family:'微軟正黑體, "Microsoft JhengHei", Arial, Helvetica;';
-    left: 50px;
-    margin-left:30%;
+    left: 5vw;
+    margin-left:20vw;
     color:#063456;
 }
 
@@ -85,7 +85,7 @@
     left: 0px;
     font-size :medium;
     text-align:center;
-    height:100px;
+    height:100vh;
 }
 
 .bg-light {

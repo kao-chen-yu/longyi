@@ -13,14 +13,14 @@
         <b-card bg-variant="light" class="contact_right">
                     <div class="contact_information">
 
-                        <div style="float: left;margin-left: 10%;margin-top: 5%;">
-                        <div style="width: 100%;margin-left: 20%;">
+                        <div style="float: left;margin-left: 6vw;margin-top: 10vh">
+                        <div style="width: 100%;margin-left: 15vw;">
                           <p style="text-align: center;">喬威建築師事務所-臺南事務所</p>
                           <p class = "information">地址 : 台南市北區大興街192巷28號</p>
                           <p class = "information">電話 : 06-2503927</p>
                         </div>                      
                         
-                        <div style="width: 100%;margin-left: 20%;">
+                        <div style="width: 100%;margin-left: 15vw;">
                           <p style="text-align: center;">喬威建築師事務所-臺中事務所</p>
                           <p class = "information">地址 : 臺中市西屯區臺灣大道四段671巷28號</p>
                           <p class = "information">電話 : 04-23505561</p>
@@ -141,7 +141,7 @@ export default {
 
 <style>
 .contacts{
-    height:500px;
+    height:60vh;
 }
 #contact_card{
     width:50%;

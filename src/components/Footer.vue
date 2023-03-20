@@ -31,7 +31,7 @@
    left: 0;
    bottom: 0;
    width: 100%;
-   height: 100px;
+   height: 15vh;
    background:linear-gradient(white,rgb(69, 65, 92));
    color: white;
    
@@ -40,7 +40,7 @@
 .footer_longyi .logo {
     
     float:left;
-    margin-top:50px;
+    margin-top:5vh;
 }
 
 .footer_longyi .footer-text{

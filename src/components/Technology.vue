@@ -136,7 +136,8 @@ export default {
 
 
 .technologies{   
-    height:650px;
+    height:100vh;
+    
 }
 
 .technologies h1{
@@ -211,8 +212,7 @@ export default {
 .tech_content1{
     width:60%;
     float:left;
-    
-    margin-left:250px;
+    margin-left:18vw;
 }
 .tech_content1 .text-white{
     width:600px;
